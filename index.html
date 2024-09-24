@@ -25,59 +25,59 @@
     <link rel="stylesheet" href="./syles/styles.css" />
   </head>
   <body class="lexend-font">
-    <header id="header" class="bg-[#F9F7F3] sticky top-0 left-0">
-      <nav class="container mx-auto py-6">
-        <div class="navbar">
-          <div class="navbar-start">
-            <div class="dropdown">
-              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
+    <!-- header -->
+    <header id="header" class="sticky top-0 left-0">
+      <div class="bg-[#F9F7F3]">
+        <nav class="container mx-auto py-6">
+          <div class="navbar">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                ></ul>
               </div>
-              <ul
-                tabindex="0"
-                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-              ></ul>
+              <a
+                href="#"
+                class="text-xl bg-green-300 font-semibold px-8 py-3 text-black rounded-lg"
+                >Blog</a
+              >
             </div>
-            <a
-              href="#"
-              class="text-xl bg-green-300 font-semibold px-8 py-3 text-black rounded-lg"
-              >Blog</a
-            >
-          </div>
-          <div class="navbar-center gap-4 lg:flex">
-            <div>
-              <img src="./assets/logo.png" alt="Logo" />
+            <div class="navbar-center gap-4 lg:flex">
+              <div>
+                <img src="./assets/logo.png" alt="Logo" />
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold">Donate Bangladesh</h2>
+              </div>
             </div>
-            <div>
-              <h2 class="text-xl font-semibold">Donate Bangladesh</h2>
+            <div class="navbar-end gap-2">
+              <img src="./assets/coin.png" alt="" />
+              <h4 class="text-gray-400 text-xl font-medium">
+                <span id="my-account-balance">5000</span> BDT
+              </h4>
             </div>
           </div>
-          <div class="navbar-end gap-2">
-            <img src="./assets/coin.png" alt="" />
-            <h4 class="text-gray-400 text-xl font-medium">
-              <span>5000</span> BDT
-            </h4>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main id="main-container" class="container mx-auto">
+        </nav>
+      </div>
       <!-- page switch button -->
-      <div id="" class="flex justify-center items-center py-8 md:py-14 gap-4">
+      <div id="" class="hidden flex justify-center items-center py-8 md:py-14 gap-4">
         <button
           class="bg-green-300 text-xl font-semibold text-black border-2 border-green-300 rounded-md px-8 py-4"
         >
@@ -89,7 +89,10 @@
           History
         </button>
       </div>
+    </header>
+    <!-- header end -->
 
+    <main id="main-container" class="container mx-auto">
       <!-- flood 1 section start -->
       <section
         id="flood-section"
@@ -100,14 +103,15 @@
           <div>
             <!-- common add money start-->
             <div
-              class="bg-gray-300 w-32 flex items-center gap-2 px-4 py-3 rounded-lg text-center mb-4"
+              class="bg-gray-300 flex w-fit items-center gap-2 px-4 py-3 rounded-lg text-center mb-4"
             >
               <img src="./assets/coin.png" alt="" />
               <h5 class="font-normal text-[16px] text-slate-800">
-                <span>0</span> BDT
+                <span id="current-donation">1000</span> BDT
               </h5>
             </div>
             <!-- common add money end -->
+
             <h1 class="text-xl font-bold">
               Donate for Flood at Noakhali, Bangladesh
             </h1>
@@ -121,20 +125,20 @@
             </p>
 
             <!-- add money input -->
-
             <div class="space-y-4">
               <input
-                id=""
+                id="input-donate-number"
                 class="max-w-full md:w-full outline-none border-2 p-4 rounded-xl border-green-300"
                 type="text"
-                placeholder="Write Donation Amount"
+                placeholder="Write Donation Amount" required autocomplete="off"
               />
-              <button
+              <button id="donate-button"
                 class="bg-green-300 text-center w-full py-4 tex-xl font-semibold rounded-xl"
               >
                 Donate Now
               </button>
             </div>
+            <!-- add money input end -->
           </div>
         </div>
       </section>
