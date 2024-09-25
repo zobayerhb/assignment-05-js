@@ -77,13 +77,14 @@
         </nav>
       </div>
       <!-- page switch button -->
-      <div id="" class="hidden flex justify-center items-center py-8 md:py-14 gap-4">
-        <button
+      <div id="" class="flex justify-center items-center py-8 md:py-14 gap-4 border-b-2">
+        <button id="donation-section"
           class="bg-green-300 text-xl font-semibold text-black border-2 border-green-300 rounded-md px-8 py-4"
         >
           Donation
         </button>
         <button
+          id="transaction-history"
           class="text-xl font-semibold text-black border-2 border-gray-500 rounded-md px-8 py-4"
         >
           History
@@ -92,7 +93,15 @@
     </header>
     <!-- header end -->
 
-    <main id="main-container" class="container mx-auto">
+    <main id="main-container" class="container mx-auto mt-10">
+      <!-- transaction start -->
+       <div id="transaction-section" class="mt-10 hidden">
+         <div id="transaction-content" class="">
+
+         </div>
+       </div>
+      <!-- transaction end -->
+
       <!-- flood 1 section start -->
       <section
         id="flood-section"
@@ -125,77 +134,34 @@
             </p>
 
             <!-- add money input -->
-            <div class="space-y-4">
-              <input
-                id="input-donate-number"
-                class="max-w-full md:w-full outline-none border-2 p-4 rounded-xl border-green-300"
-                type="text"
-                placeholder="Write Donation Amount" required autocomplete="off"
-              />
-              <button id="donate-button"
-                class="bg-green-300 text-center w-full py-4 tex-xl font-semibold rounded-xl"
-              >
-                Donate Now
-              </button>
-            </div>
+            <form>
+              <div class="space-y-4">
+                <input
+                  id="input-donate-number"
+                  class="max-w-full md:w-full outline-none border-2 p-4 rounded-xl border-green-300"
+                  type="text"
+                  placeholder="Write Donation Amount"
+                  required
+                  autocomplete="off"
+                />
+                <button
+                  id="donate-button"
+                  class="bg-green-300 text-center w-full py-4 tex-xl font-semibold rounded-xl"
+                >
+                  Donate Now
+                </button>
+              </div>
+            </form>
             <!-- add money input end -->
           </div>
         </div>
       </section>
       <!-- flood 1 section end -->
-
-      <!-- flood 2 section start -->
-      <section
-        id="flood-section"
-        class="md:mx-20 foold-section border-2 border-gray-300 rounded-xl"
-      >
-        <div class="w-full hero-content flex-col lg:flex-row py-8">
-          <img src="./assets/noakhali.png" class="rounded-lg shadow-2xl" />
-          <div>
-            <!-- common add money start-->
-            <div
-              class="bg-gray-300 w-32 flex items-center gap-2 px-4 py-3 rounded-lg text-center mb-4"
-            >
-              <img src="./assets/coin.png" alt="" />
-              <h5 class="font-normal text-[16px] text-slate-800">
-                <span>0</span> BDT
-              </h5>
-            </div>
-            <!-- common add money end -->
-            <h1 class="text-xl font-bold">
-              Donate for Flood at Noakhali, Bangladesh
-            </h1>
-            <p class="py-6 font-light text-[16px] w-[512px]">
-              The recent floods in Noakhali have caused significant damage to
-              homes infrastructure. Your donation will help provide essential
-              supplies and to those affected by this disaster. Every
-              contribution, big or small, makes difference. Please join us in
-              supporting the relief efforts and making a positive impact on the
-              lives of those in need.
-            </p>
-
-            <!-- add money input -->
-
-            <div class="space-y-4">
-              <input
-                id=""
-                class="max-w-full md:w-full outline-none border-2 p-4 rounded-xl border-green-300"
-                type="text"
-                placeholder="Write Donation Amount"
-              />
-              <button
-                class="bg-green-300 text-center w-full py-4 tex-xl font-semibold rounded-xl"
-              >
-                Donate Now
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- flood 2 section end -->
     </main>
 
     <script src="./js/common-function.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/transaction.js"></script>
+    <script src="./js/utilities.js"></script>
   </body>
 </html>

@@ -31,6 +31,21 @@ document.getElementById("donate-button").addEventListener('click', function(even
     document.getElementById("current-donation").innerText = newBalanceAfterDonate;
     document.getElementById("my-account-balance").innerText = myNewBalanceAfterDonate;
     document.getElementById("input-donate-number").value = '';
-    
+    document.getElementById("input-donate-number").focus();
 
+    // create element 
+    const div = document.createElement('div');
+    div.classList.add("border-2")
+    div.classList.add("p-4")
+    div.innerHTML = `
+
+    <h4>${donateInputNumber} tk. donated</h4>
+
+    `
+    document.getElementById('transaction-content').appendChild(div);
+
+})
+
+document.getElementById('donation-section').addEventListener("click", function(){
+    showSection('flood-section')
 })
