@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog page</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <div class="bg-[#F9F7F3]">
+        <nav class="container mx-auto py-6">
+          <div class="navbar">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                ></ul>
+              </div>
+              <a
+                href="#"
+                id="blog-button"
+                class="text-xl bg-green-300 font-semibold px-8 py-3 text-black rounded-lg"
+                >Blog</a
+              >
+            </div>
+            <div class="navbar-center gap-4 lg:flex">
+              <div>
+                <img src="./assets/logo.png" alt="Logo" />
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold">Donate Bangladesh</h2>
+              </div>
+            </div>
+            <div class="navbar-end gap-2">
+              <img src="./assets/coin.png" alt="" />
+              <h4 class="text-gray-400 text-xl font-medium">
+                <span id="my-account-balance">5000</span> BDT
+              </h4>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="container mx-auto">
+      <div class="join join-vertical w-full mt-10">
+        <div
+          class="collapse collapse-arrow join-item border-base-300 border mb-5 rounded-2xl"
+        >
+          <input type="radio" name="my-accordion-4" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is DOM used in JavaScript?
+          </div>
+          <div class="collapse-content">
+            <p>
+              programming interface that allows us to create, change or remove
+              elements from the document.
+            </p>
+          </div>
+        </div>
+        <div
+          class="collapse collapse-arrow join-item border-base-300 border mb-5 rounded-2xl"
+        >
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            How does addEventListener work in JavaScript?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Adding a function, or an object that implements a handleEvent()
+              function, to the list of event listeners for the specified event
+              type on the EventTarget on which it's called
+            </p>
+          </div>
+        </div>
+        <div
+          class="collapse collapse-arrow join-item border-base-300 border mb-5 rounded-2xl"
+        >
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            How to write simple function in js?
+          </div>
+          <div class="collapse-content">
+            <p>1. The function keyword is used to create the function. 2.The name of the function is greet , followed by parentheses (). 3/The code that is executed when we call the function. In our case, it is console. log("Hello World!");</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

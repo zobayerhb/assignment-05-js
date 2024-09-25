@@ -46,8 +46,17 @@ document.getElementById("donate-button").addEventListener('click', function(even
     `
     document.getElementById('transaction-content').appendChild(div);
 
+
+    if(donateInputNumber){
+        alert("Donation Done")
+    }
+
 })
 
 document.getElementById('donation-section').addEventListener("click", function(){
     showSection('main-container')
+})
+
+document.getElementById('blog-button').addEventListener("click", function(){
+    window.location.href = './blog.html';
 })
