@@ -6,3 +6,6 @@
 .hero-content{
     align-items: flex-start;
 }
+.bg-blur{
+  background: #ffffffe6;
+}

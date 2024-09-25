@@ -35,11 +35,13 @@ document.getElementById("donate-button").addEventListener('click', function(even
 
     // create element 
     const div = document.createElement('div');
-    div.classList.add("border-2")
-    div.classList.add("p-4")
+    div.classList.add("border-2");
+    div.classList.add("p-4");
+    div.classList.add("rounded-xl");
     div.innerHTML = `
 
     <h4>${donateInputNumber} tk. donated</h4>
+    <p class="text-green-400"> ${new Date()} </p>
 
     `
     document.getElementById('transaction-content').appendChild(div);
@@ -47,5 +49,5 @@ document.getElementById("donate-button").addEventListener('click', function(even
 })
 
 document.getElementById('donation-section').addEventListener("click", function(){
-    showSection('flood-section')
+    showSection('main-container')
 })
